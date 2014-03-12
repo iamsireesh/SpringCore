@@ -54,4 +54,56 @@
     </bean>
     <!-- Configuring a user defined class object as property of pojo class ends 
 		here -->
+	<!-- Configuration of bean property types -->
+	<bean id="beanprops" class="com.iamsireesh.setter.beanpropertytypes.BeanPropImpl">
+	<property name="luckyno" value="18"/>
+	<property name="salary" value="100000.99"/>
+	<property name="age" value="25.5"/>
+	<property name="aboutyou" value="I am a Very good human being"/>
+	<property name="fruits">
+		<list>
+			<value>Apple</value>
+			<value>Banana</value>
+			<value>Orange</value>
+			<value>Guvua</value>
+			<value>Suger Cane</value>
+			<value>Watermelon</value>
+		</list>
+	</property>
+	<property name="vegetables">
+		<set>
+			<value>Capsicum</value>
+			<value>Capsicum</value>
+			<value>Brinjal</value>
+			<value>Lady Finger</value>
+			<value>Coriender Leaves</value>
+			<value>Cauli Flower</value>
+		</set>
+	</property>
+	<property name="course">
+		<list>
+			<value>Java</value>
+			<value>.Net</value>
+			<value>Ruby</value>
+			<value>Rails</value>
+			<value>PHP</value>
+			<value>JUnit</value>
+	
+		</list>
+	</property>
+	<property name="runs">
+		<set>
+			<value>100</value>
+			<value>200</value>
+			<value>300</value>
+			<value>50</value>
+			<value>250</value>
+			<value>350</value>
+		</set>
+	</property>
+	<property name="userdefined" ref="userdeftest"/>
+	</bean>
+	<bean id="userdeftest" class="com.iamsireesh.setter.beanpropertytypes.UserDefinedBean">
+	<property name="message" value="Bean Property Types"></property>
+	</bean>
 </beans>
