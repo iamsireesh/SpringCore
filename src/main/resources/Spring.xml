@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans-3.2.xsd">
+
+	<!-- Hello World -->
+	<!-- Hello World With Single Ton Demo -->
+	<!-- Single object instance per container -->
+	<bean id="hello" class="com.iamsireesh.helloworld.HelloWorld">
+		<property name="message" value="Hello World"/>
+	</bean>
+
+	<!-- Hello World With Prototype Ton Demo -->
+	<!-- Any number of object instances per container -->
+	<bean id="hello1" class="com.iamsireesh.helloworld.HelloWorld"
+		scope="prototype">
+		<property name="message" value="Hello World"/>
+	</bean>
+</beans>
