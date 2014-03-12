@@ -17,4 +17,28 @@
 		scope="prototype">
 		<property name="message" value="Hello World"/>
 	</bean>
+	<!-- Configuring a predefined class object as property of pojo class starts 
+		here -->
+	<bean id="utildate" class="java.util.Date">
+		<property name="year">
+			<value>87</value>
+		</property>
+
+		<property name="month" value="10" />
+		<property name="date" value="26"></property>
+	</bean>
+	<!-- Configuring a predefined class object as property of pojo class starts 
+		here -->
+	<bean id="predefined" class="com.iamsireesh.setter.predefined.DemoInterImpl">
+		<property name="message" value="Predefind Demo Example"/>
+		<!-- Injecting the dependent class to this class -->
+		<property name="date" ref="utildate"/>
+		<!-- Or 
+		<property name="date">
+			<ref bean="utildate" />
+		</property>
+		-->
+	</bean>
+	<!-- Configuring a predefined class object as property of pojo class ends 
+		here -->
 </beans>
