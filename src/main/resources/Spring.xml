@@ -41,4 +41,17 @@
 	</bean>
 	<!-- Configuring a predefined class object as property of pojo class ends 
 		here -->
+	<!-- Configuring a user defined class object as property of pojo class starts 
+		here -->
+    <bean name="userdefined" class="com.iamsireesh.setter.userdefined.UserDefinedImpl">
+    <property name="age" value="85"></property>
+    <property name="userdefinedmsg" ref="testbean"></property>
+    <property name="date" ref="utildate"></property>
+    </bean>
+    
+    <bean id="testbean" class="com.iamsireesh.setter.userdefined.UserDefined">
+    <property name="message" value="You are Too young"></property>
+    </bean>
+    <!-- Configuring a user defined class object as property of pojo class ends 
+		here -->
 </beans>
