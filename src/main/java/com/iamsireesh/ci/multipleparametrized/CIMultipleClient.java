@@ -20,5 +20,9 @@ public class CIMultipleClient {
 		//Type3: Arguments by using index
 		ConstructorMultiple obj2 = (ConstructorMultiple) factory.getBean("cimultiple2");
 		System.out.println(obj2.toString());
+		
+		//Type4: Using all the above three types
+		ConstructorMultiple obj3 = (ConstructorMultiple) factory.getBean("cimultiple3");
+		System.out.println(obj3.toString());
 	}
 }
