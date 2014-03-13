@@ -226,4 +226,21 @@
 			<ref bean="userdeftest"/>
 		</constructor-arg>
 	</bean>
+	
+	<!-- CI Setter Override -->
+	<bean id="cisetteroverride" class="com.iamsireesh.cisetter.override.CISetterOverride">
+		<property name="name" value="Sireesh"/>
+		<property name="age" value="25"/>
+		<property name="salery" value="100000.99"/>
+		
+		<constructor-arg>
+			<value>SireeshOld</value>
+		</constructor-arg>
+		<constructor-arg>
+			<value>19</value>
+		</constructor-arg>
+		<constructor-arg>
+			<value>10000.99</value>
+		</constructor-arg>
+	</bean>
 </beans>
