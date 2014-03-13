@@ -81,7 +81,7 @@
 		</set>
 	</property>
 	<property name="course">
-		<list>
+		<array>
 			<value>Java</value>
 			<value>.Net</value>
 			<value>Ruby</value>
@@ -89,17 +89,17 @@
 			<value>PHP</value>
 			<value>JUnit</value>
 	
-		</list>
+		</array>
 	</property>
 	<property name="runs">
-		<set>
+		<array>
 			<value>100</value>
 			<value>200</value>
 			<value>300</value>
 			<value>50</value>
 			<value>250</value>
 			<value>350</value>
-		</set>
+		</array>
 	</property>
 	<property name="userdefined" ref="userdeftest"/>
 	</bean>
@@ -164,6 +164,66 @@
 		</constructor-arg>
 		<constructor-arg index="2" type="double">
 			<value>1000000.50</value>
+		</constructor-arg>
+	</bean>
+	<!-- Constructor Injection With Bean Property Types -->
+	<bean id="cibeanprops" class="com.iamsireesh.ci.beanpropertytypes.CIBeanProperties">
+		<constructor-arg>
+			<value>18</value>
+		</constructor-arg>
+		<constructor-arg>
+			<value>100000.99</value>
+		</constructor-arg>
+		<constructor-arg>
+			<value>25</value>
+		</constructor-arg>
+		<constructor-arg>
+			<value>I am a Very good human being</value>
+		</constructor-arg>
+		<constructor-arg>
+			<list>
+				<value>Apple</value>
+				<value>Banana</value>
+				<value>Orange</value>
+				<value>Guvua</value>
+				<value>Suger Cane</value>
+				<value>Watermelon</value>
+			</list>
+		</constructor-arg>
+		
+		<constructor-arg>
+			<set>
+				<value>Capsicum</value>
+				<value>Capsicum</value>
+				<value>Brinjal</value>
+				<value>Lady Finger</value>
+				<value>Coriender Leaves</value>
+				<value>Cauli Flower</value>
+			</set>
+		</constructor-arg>
+		<constructor-arg>
+			<array>
+				<value>Java</value>
+				<value>.Net</value>
+				<value>Ruby</value>
+				<value>Rails</value>
+				<value>PHP</value>
+				<value>JUnit</value>
+	
+			</array>
+		</constructor-arg>
+		<constructor-arg>
+			<array>
+				<value>100</value>
+				<value>200</value>
+				<value>300</value>
+				<value>50</value>
+				<value>250</value>
+				<value>350</value>
+			</array>
+		</constructor-arg>
+		<constructor-arg>
+			<ref bean="userdeftest"/>
 		</constructor-arg>
 	</bean>
 </beans>
