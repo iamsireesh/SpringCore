@@ -140,4 +140,17 @@
 			<value>25</value>
 		</constructor-arg>
 	</bean>
+	
+	<!-- Type 2: Constructor arguments using data index -->
+	<bean id="cimultiple2" class="com.iamsireesh.ci.multipleparametrized.ConstructorMultiple">
+		<constructor-arg index="2">
+			<value>1000000.50</value>
+		</constructor-arg>
+		<constructor-arg index="0">
+			<value>Sireesh</value>
+		</constructor-arg>
+		<constructor-arg index="1">
+			<value>25</value>
+		</constructor-arg>
+	</bean>
 </beans>
