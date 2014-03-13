@@ -113,4 +113,18 @@
 			<value>Hello World! From Constructor</value>
 		</constructor-arg>
 	</bean>
+	
+	<!-- Constructor Injection With Multiple Parameters -->
+	<!-- Type 1: Arguments In Sequence-->
+	<bean id="cimultiple" class="com.iamsireesh.ci.multipleparametrized.ConstructorMultiple">
+		<constructor-arg>
+			<value>Sireesh</value>
+		</constructor-arg>
+		<constructor-arg>
+			<value>24</value>
+		</constructor-arg>
+		<constructor-arg>
+			<value>1000000.50</value>
+		</constructor-arg>
+	</bean>
 </beans>
