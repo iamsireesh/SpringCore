@@ -106,4 +106,11 @@
 	<bean id="userdeftest" class="com.iamsireesh.setter.beanpropertytypes.UserDefinedBean">
 	<property name="message" value="Bean Property Types"></property>
 	</bean>
+	
+	<!-- Constructor Injection Demo -->
+	<bean id="cidemo" class="com.iamsireesh.ci.demo.ConstructorDemo">
+		<constructor-arg>
+			<value>Hello World! From Constructor</value>
+		</constructor-arg>
+	</bean>
 </beans>
