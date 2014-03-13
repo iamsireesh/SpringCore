@@ -127,4 +127,17 @@
 			<value>1000000.50</value>
 		</constructor-arg>
 	</bean>
+	
+	<!-- Type 2: Constructor arguments using data type -->
+	<bean id="cimultiple1" class="com.iamsireesh.ci.multipleparametrized.ConstructorMultiple">
+		<constructor-arg type="double">
+			<value>1000000.50</value>
+		</constructor-arg>
+		<constructor-arg type="java.lang.String">
+			<value>Sireesh</value>
+		</constructor-arg>
+		<constructor-arg type="int">
+			<value>25</value>
+		</constructor-arg>
+	</bean>
 </beans>
