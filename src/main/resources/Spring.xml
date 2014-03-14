@@ -280,7 +280,7 @@
 		</constructor-arg>
 	</bean>
 	
-	<!-- Factory Method Demo -->
+	<!-- Static Factory Method Demo -->
 	<bean id="factorybean" class="com.iamsireesh.factorymethod.FactoryBean" factory-method="getFactoryBeanObject">
 		<constructor-arg>
 			<value>Hello World! From factory Method</value>
@@ -295,5 +295,17 @@
 		<property name="cl" ref="cal"/>
 	</bean>
 	
+	<!-- Instance Factory Method Demo -->
+	<bean id = "t1" factory-bean = "db" factory-method = "getTestBean">
+		<constructor-arg>
+			<value>Gmg. my dear friends... :)</value>
+		</constructor-arg>
+	</bean>
+	
+	<bean id = "db" class = "com.iamsireesh.instancefactory.DemoBean">			
+		<property name = "tb">
+			<ref bean = "t1"/>
+		</property>
+	</bean>
 	
 </beans>

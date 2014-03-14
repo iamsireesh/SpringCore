@@ -12,10 +12,17 @@ Note:
 -->If factory method expects any arguments then pass arguments using <constructor-arg>
 
 Eg: Static Factory Methods
-Class c=Class.forName(“ClassName”)
-Thread t=Thread.currentThread()
-Calendar cl=Calander.getInstance()
+Class c=Class.forName(“ClassName”);
+Thread t=Thread.currentThread();
+Calendar cl=Calander.getInstance();
 
 Eg: Instance Methods
-String s=new String(“Sireesh”)
-String s=s.concat(“Vattikuti”)
+String s=new String(“Sireesh”);
+String s=s.concat(“Vattikuti”);
+
+What is Factory Class?
+A: A class method which can return another class object is called Factory Class
+
+Integer i=new Integer(1000)'
+i.toString() //Integer method returns String class object
+i,e String s=i.toString();
