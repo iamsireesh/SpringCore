@@ -2,6 +2,8 @@ package com.iamsireesh.setter.beanpropertytypes;
 
 import java.util.Arrays;
 import java.util.List;
+import java.util.Map;
+import java.util.Properties;
 import java.util.Set;
 
 public class BeanPropImpl implements BeanPropInterface {
@@ -15,9 +17,22 @@ public class BeanPropImpl implements BeanPropInterface {
 	private Set vegetables;
 	private String course[];
 	private int runs[];
+	private Map sports;
+	private Properties politicians;
+	
 
 	// User Defined
 	private UserDefinedBean userdefined;
+	
+	
+
+	public void setSports(Map sports) {
+		this.sports = sports;
+	}
+
+	public void setPoliticians(Properties politicians) {
+		this.politicians = politicians;
+	}
 
 	public void setUserdefined(UserDefinedBean userdefined) {
 		this.userdefined = userdefined;
@@ -60,7 +75,9 @@ public class BeanPropImpl implements BeanPropInterface {
 				+ salary + ",\n" + "age=" + age + ",\n" + "aboutyou="
 				+ aboutyou + ",\n" + "fruits=" + fruits + ",\n" + "vegetables="
 				+ vegetables + ",\n" + " course=" + Arrays.toString(course)
-				+ ",\n" + "runs=" + Arrays.toString(runs);
+				+ ",\n" + "runs=" + Arrays.toString(runs)
+				+",\n"+"sports="+sports.toString()
+				+",\n"+"politicians"+politicians.toString();
 	}
 
 }

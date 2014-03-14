@@ -101,6 +101,24 @@
 			<value>350</value>
 		</array>
 	</property>
+	<property name="sports">
+		<map>
+			<entry>
+				<key><value>Master</value></key>
+				<value>Sachin</value>
+			</entry>
+			<entry>
+				<key><value>Blaster</value></key>
+				<value>Virat</value>
+			</entry>
+		</map>
+	</property>
+	<property name="politicians">
+		<props>
+			<prop key="BJP">Modi</prop>
+			<prop key="JDU">Nitish</prop>
+		</props>
+	</property>
 	<property name="userdefined" ref="userdeftest"/>
 	</bean>
 	<bean id="userdeftest" class="com.iamsireesh.setter.beanpropertytypes.UserDefinedBean">
@@ -221,6 +239,24 @@
 				<value>250</value>
 				<value>350</value>
 			</array>
+		</constructor-arg>
+		<constructor-arg>
+			<map>
+				<entry>
+					<key><value>Master</value></key>
+					<value>Sachin</value>
+				</entry>
+				<entry>
+					<key><value>Blaster</value></key>
+					<value>Virat</value>
+				</entry>
+			</map>
+		</constructor-arg>
+		<constructor-arg>
+			<props>
+				<prop key="BJP">Modi</prop>
+				<prop key="JDU">Nitish</prop>
+			</props>
 		</constructor-arg>
 		<constructor-arg>
 			<ref bean="userdeftest"/>
