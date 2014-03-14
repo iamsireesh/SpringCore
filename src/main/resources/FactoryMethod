@@ -1,0 +1,21 @@
+What is Factory Method?
+A: A method of java class which is capable of constructing and returns its own class object.
+
+When a bean class contains a private constructor we cannot create its object from outside. 
+Then we can give instructions to spring container to create object of bean class by using factory method.
+
+Note:
+-->Factory methods can be static or non static [instance]
+-->Factory method internally calls constructor at the time of object creation
+-->Factory methods should be public methods, So that can be accessed from outside the class.
+--><factory-method> Attribute is used to to configure factory method.
+-->If factory method expects any arguments then pass arguments using <constructor-arg>
+
+Eg: Static Factory Methods
+Class c=Class.forName(“ClassName”)
+Thread t=Thread.currentThread()
+Calendar cl=Calander.getInstance()
+
+Eg: Instance Methods
+String s=new String(“Sireesh”)
+String s=s.concat(“Vattikuti”)

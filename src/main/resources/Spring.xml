@@ -279,4 +279,21 @@
 			<value>10000.99</value>
 		</constructor-arg>
 	</bean>
+	
+	<!-- Factory Method Demo -->
+	<bean id="factorybean" class="com.iamsireesh.factorymethod.FactoryBean" factory-method="getFactoryBeanObject">
+		<constructor-arg>
+			<value>Hello World! From factory Method</value>
+		</constructor-arg>
+	</bean>
+	
+	<bean id="cal" class="java.util.Calendar" factory-method="getInstance"/>
+	
+	
+	<bean id="factorymethod" class="com.iamsireesh.factorymethod.FactoryDemoImpl">
+		<property name="fl" ref="factorybean"/>
+		<property name="cl" ref="cal"/>
+	</bean>
+	
+	
 </beans>
