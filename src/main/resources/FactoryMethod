@@ -26,3 +26,9 @@ A: A class method which can return another class object is called Factory Class
 Integer i=new Integer(1000)'
 i.toString() //Integer method returns String class object
 i,e String s=i.toString();
+
+Instance Factory
+//Factory Class Returning another class object
+DemoBean d=new DemoBean();		
+TestBean t=d.getTestBean("Hello");
+System.out.println(t);
