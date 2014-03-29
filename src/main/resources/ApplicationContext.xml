@@ -5,14 +5,38 @@
     http://www.springframework.org/schema/beans/spring-beans-3.2.xsd">
     
     
-    <!-- Provide the location of configuration file -->
+    <!-- Provide the location of configuration file : Configuring a single file
     <bean id="propConfig" class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
     	<property name="location" value="spring.properties"/>
+    </bean>
+    
+    -->
+    
+    <!-- location is the bean property name for configuring a single properties file
+    	 locations is the bean property name for configuring multiple properties file
+     -->
+    
+    <!-- Provide the location of configuration file : Configuring multiple properties files-->
+    <bean id="propConfig" class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+    	<property name="locations">
+    		<list>
+    			<value>spring.properties</value>
+    			<value>first.properties</value>
+    			<value>second.properties</value>
+    		</list>
+    	</property>
     </bean>
     
     <bean id="props" class="com.iamsireesh.ap.propsfileread.PropsImpl">
     	<property name="name" value="${Name}"/>
     	<property name="age" value="${Age}"/>
     	<property name="gender" value="${Gender}"/>
+    </bean>
+    
+    <bean id="multiprops" class="com.iamsireesh.ap.multiplepropsread.PropsImpl">
+    	<property name="name" value="${Name}"/>
+    	<property name="age" value="${Age}"/>
+    	<property name="gender" value="${Gender}"/>
+    	<property name="profession" value="${Profession}"/>
     </bean>
 </beans>
