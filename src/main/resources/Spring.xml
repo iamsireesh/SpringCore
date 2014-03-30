@@ -319,4 +319,29 @@
 			<ref bean = "t1"/>
 		</property>
 	</bean>
+	
+	<!-- Configuring same class multiple times for calling different constructors of the same class -->
+	<bean id="first" class="com.iamsireesh.ci.callmutilple.MultipleCI">
+		<constructor-arg>
+			<value>Sireesh</value>
+		</constructor-arg>
+		<constructor-arg>
+			<value>25</value>
+		</constructor-arg>
+	</bean>
+	
+	<bean id="second" class="com.iamsireesh.ci.callmutilple.MultipleCI">
+		<constructor-arg>
+			<value>Sireesh</value>
+		</constructor-arg>
+		<constructor-arg>
+			<value>25</value>
+		</constructor-arg>
+		<constructor-arg>
+			<value>Male</value>
+		</constructor-arg>
+	</bean>
+	
+	
+	
 </beans>
