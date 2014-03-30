@@ -1,0 +1,26 @@
+User Defined bean life cycle methods
+======================================
+Spring bean class allows us to define methods to act like a bean life cycle methods.
+
+1. init() method: 
+Container class this method automatically upon the instantiation of the bean.
+init() method is useful to check whether the appropriate values were injected to bean properties.
+init() method is useful to perform some additional initialization operations before calling any method.
+
+2. destroy() method : 
+Container calls this method just before the destruction of spring bean class object created by the container.
+destroy() method is useful to nullify bean properties and release the resources.  
+
+We can configure the above two methods in two ways.
+Programmatic Statements : By implementing the following interfaces.
+InitializingBean with afterPropertiesSet() method.
+DisposableBean with destroy() method.  
+Declarative Statements [In Spring configuration file]
+<bean> attributes: init-method and destroy-method.
+If you have too many beans having initialization and or destroy methods with the same name, then we can define these methods in common place in spring configuration file as it provide the facility with the following attributes
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans-3.0.xsd"
+    default-init-method="init" 
+    default-destroy-method="destroy">

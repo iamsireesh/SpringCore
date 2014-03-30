@@ -39,4 +39,13 @@
     	<property name="gender" value="${Gender}"/>
     	<property name="profession" value="${Profession}"/>
     </bean>
+    
+    <!-- Userdefined Bean life cycle methods: Programmatic Approach  -->
+    <bean id="initbean" class="com.iamsireesh.ap.programmatic.beanlifecycle.Initialization">
+    	<property name="message" value="Hi in::Init"/>
+    </bean>
+    
+    <bean id="destroybean" class="com.iamsireesh.ap.programmatic.beanlifecycle.DestroyBean">
+    	<property name="destroyMessage" value="Hi in::Destroy"/>
+    </bean>
 </beans>
