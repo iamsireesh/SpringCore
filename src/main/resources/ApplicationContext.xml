@@ -48,4 +48,14 @@
     <bean id="destroybean" class="com.iamsireesh.ap.programmatic.beanlifecycle.DestroyBean">
     	<property name="destroyMessage" value="Hi in::Destroy"/>
     </bean>
+    
+    <bean id="declarativeinitbean" class="com.iamsireesh.ap.declarative.beanlifecycle.Initialization" init-method="init">
+    	<property name="message" value="Hi in::Init"/>
+    </bean>
+    
+    <bean id="declarativedestroybean" class="com.iamsireesh.ap.declarative.beanlifecycle.DestroyBean" destroy-method="destroy">
+    	<property name="destroyMessage" value="Hi in::Destroy"/>
+    </bean>
+    
+    
 </beans>
