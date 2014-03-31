@@ -17,6 +17,19 @@ public class ByNameClient {
 		Object object1=context.getBean("sidominateci");
 		ExampleInterface result1=(ExampleBean)object1;
 		System.out.println(result1.show());
+		
+		//Explicit Wiring dominates autowiring when either both are using setter or constructor injection
+		System.out.println("*************************");
+		Object object2=context.getBean("exdominateaw");
+		ExampleInterface result2=(ExampleBean)object2;
+		System.out.println(result2.show());
+		
+		//Output of All 3
+		//Hi Sireesh Have a nice day
+		//*************************
+		//Hi CI::Sireesh Have a nice day
+		//*************************
+		//Hi Sireesh Have a nice day DUDE
 
 	}
 

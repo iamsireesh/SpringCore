@@ -27,4 +27,22 @@
    		</constructor-arg>
    </bean>
    
+   <!-- Explicit Wiring dominates autowiring when either both are using setter or constructor injection -->
+   <!-- 
+   <bean id="tb" class="com.iamsireesh.autowiring.byname.TestBean">
+   		<property name="message" value="Have a nice day"/>
+   </bean>
+    -->
+    
+    <bean id="tb2" class="com.iamsireesh.autowiring.byname.TestBean">
+   		<property name="message" value="Have a nice day DUDE"/>
+   </bean>
+   
+   <bean id="exdominateaw" class="com.iamsireesh.autowiring.byname.ExampleBean" autowire="byName">
+   		<property name="name" value="Sireesh"/>
+   		<property name="tb">
+   			<ref bean="tb2"/>
+   		</property>
+   </bean>
+   
 </beans>
