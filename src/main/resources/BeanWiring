@@ -1,0 +1,48 @@
+What is bean wiring?
+A: The process of configuring bean properties and performing DI on bean is called as wiring operation.
+
+What are the types of bean wiring available in Spring?
+A: There are two types of wiring operations
+    Explicit wiring
+    Auto wiring
+
+What is bean explicit wiring?
+A: If spring bean properties are configured explicitly in spring configuration file for DI is called Explicit wiring.
+
+What is bean auto wiring?
+A: The process of detecting dependent values to bean properties automatically by the container without any configuration of properties, then it is called as auto wiring.
+
+What are different Modes of auto wiring?
+A: The autowiring functionality has five modes which can be used to instruct Spring container to use autowiring for dependency injection:
+
+1. no: This is default setting which means no autowiring and you should use explicit bean reference for wiring. You have nothing to do special for this wiring.
+
+2. byName: Autowiring by property name. This performs setter injection on bean property. The name of bean property (which is called in java class) and the bean id of the dependent class object must match by name.  
+
+3. byType: Autowiring by property datatype. This performs setter injection on bean property. In this mode the data type of bean properties must match with the dependent bean object data type . If more than one such beans exist, a fatal exception is thrown.
+
+4. constructor:	It performs DI on bean properties by using parameterized constructors. Here no names need not to match but an appropriate parameterized constructor should be available.
+
+5. autodetect: Spring first tries to wire using autowire by constructor, if it does not work, Spring tries to autowire by byType.
+
+Explain some of the important points about autowiring?
+A: 
+1. If we don’t know bean properties of a predefined classes or constructor details particularly than we can use autowiring concept.
+Autowiring is useful to work with predefined classes and third party API’s .
+
+2. If we configure both autowiring and explicit wiring on setter injection, The explicit wiring values will get affected. 
+
+3. If autowiring is performing setter injection and explicit wiring performing constructor injection on same bean properties with different values then autowiring values will get affected.
+
+4. If autowiring is performing constructor injection and explicit wiring performing setter injection on same bean properties with different values than explicit wiring values will get affected.
+We can go for few properties with explicit wiring and few properties with autowiring.
+
+
+What are the limitations with autowiring?
+A: Limitations of autowiring are:
+
+1. Overriding possibility: You can still specify dependencies using <constructor-arg> and <property> settings which will always override autowiring.
+
+2. Primitive data types: You cannot autowire so-called simple properties such as primitives, Strings, and Classes.
+
+3. Confusing nature: Autowiring is less exact than explicit wiring, so if possible prefer using explicit wiring.
