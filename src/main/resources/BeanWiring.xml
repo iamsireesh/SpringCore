@@ -13,4 +13,18 @@
    		<property name="name" value="Sireesh"/>
    </bean>
    
+   <!-- Setter Injection will always dominate Constructor Injection -->
+   <bean id="tb1" class="com.iamsireesh.autowiring.byname.TestBean">
+   		<property name="message" value="CI::Have a nice day"/>
+   </bean>
+   
+   <bean id="sidominateci" class="com.iamsireesh.autowiring.byname.ExampleBean" autowire="byName">
+   		<constructor-arg>
+   			<value>CI::Sireesh</value>
+   		</constructor-arg>
+   		<constructor-arg>
+   			<ref bean="tb1"/>
+   		</constructor-arg>
+   </bean>
+   
 </beans>
