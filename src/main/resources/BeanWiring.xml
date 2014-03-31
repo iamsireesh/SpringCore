@@ -45,4 +45,33 @@
    		</property>
    </bean>
    
+   <!-- Autowiring:: By Type -->
+   <bean id="tbxyz" class="com.iamsireesh.autowiring.bytype.TestBean">
+   		<property name="message" value="Have a nice day"/>
+   </bean>
+   
+    <bean id="bytype" class="com.iamsireesh.autowiring.bytype.ExampleBean" autowire="byType">
+   		<property name="name" value="Sireesh"/>
+   </bean>
+   
+   <!-- We should not do this:: Configuring same bean type twice with different bean id when we are using wiring
+   byType
+   If we do like this it will through ambiguity error
+   -->
+   <!-- 
+   <bean id="tbabc" class="com.iamsireesh.autowiring.bytype.TestBean">
+   		<property name="message" value="Have a nice day"/>
+   </bean>
+   
+   <bean id="tbdef" class="com.iamsireesh.autowiring.bytype.TestBean">
+   		<property name="message" value="Have a nice day"/>
+   </bean>
+   
+    <bean id="bytypebean" class="com.iamsireesh.autowiring.bytype.ExampleBean" autowire="byType">
+   		<property name="name" value="Sireesh"/>
+   </bean>
+   
+    -->
+   
+   
 </beans>
