@@ -80,4 +80,16 @@
    
     <bean id="byconstructor" class="com.iamsireesh.autowiring.constructor.ExampleBean" autowire="constructor"/>
    
+   
+   <!-- Autowire By AutoDetect:: autodetect is removed from spring 3.0 and it is moved to annotations 
+    <bean id="tbdef" class="com.iamsireesh.autowiring.autodetect.TestBean">
+   		<property name="message" value="Have a nice day::AutoDetect"/>
+   </bean>
+   
+    <bean id="byautodetect" class="com.iamsireesh.autowiring.autodetect.ExampleBean" autowire="autodetect"/>
+    
+    -->
+   
+   
+   
 </beans>
