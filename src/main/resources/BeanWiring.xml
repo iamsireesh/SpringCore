@@ -72,6 +72,12 @@
    </bean>
    
     -->
+    
+    <!-- AutoWire By Constructor -->
+   <bean id="tbabc" class="com.iamsireesh.autowiring.constructor.TestBean">
+   		<property name="message" value="Have a nice day"/>
+   </bean>
    
+    <bean id="byconstructor" class="com.iamsireesh.autowiring.constructor.ExampleBean" autowire="constructor"/>
    
 </beans>
