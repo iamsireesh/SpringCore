@@ -1,27 +1,14 @@
-*.pydevproject
-.project
-.metadata
-.gradle
-bin/
-tmp/
-target/
-*.tmp
-*.bak
-*.swp
-*~.nib
-local.properties
-.classpath
-.settings/
-.loadpath
+# Java.gitignore
+*.class
 
-# External tool builders
-.externalToolBuilders/
+# Package Files #
+*.jar
+*.war
+*.ear
 
-# Locally stored "Eclipse launch configurations"
-*.launch
 
-# CDT-specific
-.cproject
+# Maven.gitignore
+/target
 
-# PDT-specific
-.buildpath
+# Ubuntu temp files
+*~
